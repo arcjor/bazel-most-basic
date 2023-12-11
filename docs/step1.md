@@ -1,3 +1,5 @@
+# STEP1
+
 This is the simplest possible bazel project - an empty workspace and empty build.
 
 When we run bazel build //.. we get:
