@@ -1,4 +1,10 @@
 load("//:my_custom_rule.bzl", "write_new_file")
+load("@rules_python//python:defs.bzl", "py_binary")
+
+py_binary(
+    name = "my_build_tool", 
+    srcs = ["my_build_tool.py"]
+)
 
 write_new_file(
     name = "write_my_custom_message_into_file",
