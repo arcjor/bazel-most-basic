@@ -6,9 +6,15 @@ def write_new_file_impl(ctx):
 #        executable = "touch",
 #        arguments = [ctx.file.my_input_file.path, output_file.path]
 #    )
-    ctx.actions.write(
+#    Switch to template expansion now
+#    ctx.actions.write(
+#        output = output_file,
+#        content = "Hello world."
+#    )    
+    ctx.actions.expand_template(
         output = output_file,
-        content = "Hello world."
+        template = ctx.file.my_input_file,
+        substitutions = {"{OUTFILE}": ctx.attr.out_file_name},
     )
     return DefaultInfo(files = depset([output_file]))
 
