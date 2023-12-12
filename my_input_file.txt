@@ -1,2 +1,2 @@
 This is the text in my input file.
-It will be templated to {OUTFILE}.
+It will be templated to {OUTFILE}...

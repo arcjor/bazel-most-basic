@@ -1,4 +1,4 @@
-# STEP2
+# STEP3
 
 Now we have created a custom rule which produces output.
 The steps in the video do not work on linux and similar steps were failing, so we pivoted to follow https://bazel.build/rules/rules-tutorial

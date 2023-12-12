@@ -1,4 +1,4 @@
-# STEP2
+# STEP4
 
 Now we use a template file to create output from the input.
 
