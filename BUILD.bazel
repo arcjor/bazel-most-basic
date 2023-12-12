@@ -1,9 +1,16 @@
-load("//:my_custom_rule.bzl", "write_new_file")
+load("//:my_custom_rule.bzl", "write_new_file", "python_write_new_file")
 load("@rules_python//python:defs.bzl", "py_binary")
 
 py_binary(
     name = "my_build_tool", 
     srcs = ["my_build_tool.py"]
+)
+
+python_write_new_file(
+    name = "python_write",
+    my_input_file = "//:my_input_file.txt",
+    out_file_name = "my_python_output",
+    build_tool = "//:my_build_tool"
 )
 
 write_new_file(
